@@ -1,212 +1,823 @@
-<!DOCTYPE HTML>
-
-<html>
-	<head>
-		<title>Portfolio by Julieta Santos</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link type="image/png" sizes="100x100" rel="icon" href="images\analysis.png" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<div id="header">
-
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Julieta Santos</a></h1>
-								<hr />
-								<p>Economist | Data analyst | Freelancer | Python for Finance | AI | ML </p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-
-							</footer>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about">About me</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li class="nav__item"><a class='nav__link nav__link-es'hreflang="es" href='index-es.html'>ES</a></li>
-           						<li class="nav__item"><a class='nav__link nav__link-en'hreflang="en" href='/'>EN</a></li>
-							</ul>
-						</nav>
-
-				</div>
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julieta Santos — Data Analyst & Economist</title>
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8YXE9DQMY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Hi I'm <strong>Julieta</strong>.</h2>
-						<p>
-							I have created this portfolio to showcase some of my projects and skills. 
-							I hope you enjoy browsing through my portfolio and feel free to contact me if you have any questions or feedback. 
-							Thank you for your time and attention.
-						</p>
-					</header>
-				</section>
+  gtag('config', 'G-K8YXE9DQMY');
+</script>
+  <!-- ════════════════════════════════════════════ -->
 
-			<!-- Carousel -->
-				<section id="projects"class="carousel">
-					<div class="reel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="dark"] {
+      --bg:         #080f1e;
+      --bg-mid:     #0d1b2e;
+      --bg-card:    rgba(13,27,46,0.75);
+      --cyan:       #4fc3f7;
+      --cyan-light: #7dd3f8;
+      --cyan-dim:   rgba(79,195,247,0.10);
+      --cyan-line:  rgba(79,195,247,0.22);
+      --text:       #e8eaf0;
+      --muted:      #5a7390;
+      --white:      #ffffff;
+      --border:     rgba(79,195,247,0.15);
+      --grid-dot:   rgba(79,195,247,0.05);
+      --shadow:     0 20px 60px rgba(0,0,0,0.45);
+      --btn-text:   #080f1e;
+    }
+    [data-theme="light"] {
+      --bg:         #f0f5fb;
+      --bg-mid:     #e4ecf5;
+      --bg-card:    rgba(255,255,255,0.80);
+      --cyan:       #0288d1;
+      --cyan-light: #039be5;
+      --cyan-dim:   rgba(2,136,209,0.08);
+      --cyan-line:  rgba(2,136,209,0.22);
+      --text:       #0d1b2e;
+      --muted:      #4a6278;
+      --white:      #0d1b2e;
+      --border:     rgba(2,136,209,0.18);
+      --grid-dot:   rgba(2,136,209,0.06);
+      --shadow:     0 20px 60px rgba(0,0,0,0.10);
+      --btn-text:   #ffffff;
+    }
 
-						<article>
-							<a href="https://github.com/JulietaSantos/Portfolio/blob/main/Stock_forecasting_project.ipynb" class="image featured"><img src="images/Fibonacci.jpg" alt="" target="_blank" /></a>
-							<header>
-								<h3><a href="https://github.com/JulietaSantos/Portfolio/blob/main/Stock_forecasting_project.ipynb">Stock price forecasting</a></h3>
-							</header>
-							<p> Keywords: Python, Exploratory Data Analysis (EDA), Time series, Forecasting, ARIMA, Prophet, LSTM network.</p>
-						</article>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-						<article>
-							<a href="https://github.com/JulietaSantos/Portfolio/blob/main/Airbnb_prices_project%20.ipynb" class="image featured"><img src="images/airbnb.jpg" alt="" target="_blank"/></a>
-							<header>
-								<h3><a href="https://github.com/JulietaSantos/Portfolio/blob/main/Airbnb_prices_project%20.ipynb">Airbnb Hedonic Pricing Analysis</a></h3>
-							</header>
-							<p> Keywords: Python, Web Scraping, Exploratory Data Analysis (EDA), Feature Engineering, Linear Regression.</p>
-						</article>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      overflow-x: hidden; transition: background 0.4s, color 0.4s;
+    }
+
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+      background-size: 32px 32px; pointer-events: none; z-index: 0;
+    }
+
+    section, nav, footer { position: relative; z-index: 1; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 4rem;
+      background: rgba(8,15,30,0.88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border); z-index: 100;
+      transition: background 0.4s, border-color 0.4s;
+    }
+    [data-theme="light"] nav { background: rgba(240,245,251,0.90); }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--cyan); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-controls {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding-left: 1.5rem; border-left: 1px solid var(--border);
+    }
+    .lang-toggle { display: flex; gap: 0.35rem; }
+    .lang-btn, .theme-btn {
+      background: none; border: 1px solid transparent; color: var(--muted);
+      font-family: 'DM Mono', monospace; font-size: 0.72rem;
+      padding: 0.28rem 0.5rem; cursor: pointer; border-radius: 3px;
+      transition: all 0.2s; letter-spacing: 0.1em;
+    }
+    .lang-btn.active { color: var(--cyan); border-color: var(--cyan); }
+    .lang-btn:hover, .theme-btn:hover { color: var(--cyan); border-color: var(--border); }
+    .theme-btn { font-size: 0.9rem; padding: 0.28rem 0.55rem; border-color: var(--border); }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 0 4rem; position: relative; overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; width: 640px; height: 640px;
+      background: radial-gradient(circle, rgba(79,195,247,0.10) 0%, transparent 68%);
+      top: 50%; left: 58%; transform: translate(-50%,-50%);
+      pointer-events: none; animation: breathe 7s ease-in-out infinite;
+    }
+    [data-theme="light"] .hero-glow {
+      background: radial-gradient(circle, rgba(2,136,209,0.08) 0%, transparent 68%);
+    }
+    @keyframes breathe {
+      0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 0.8; }
+      50%      { transform: translate(-50%,-50%) scale(1.1); opacity: 1; }
+    }
+    .hero-content { max-width: 680px; }
+    .hero-tag {
+      font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--cyan);
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.05;
+      color: var(--text); margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.38s forwards;
+    }
+    .hero-name span { color: var(--cyan); }
+    .hero-desc {
+      font-size: 1.05rem; color: var(--muted); line-height: 1.85;
+      max-width: 500px; font-weight: 300; margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.55s forwards;
+    }
+    .hero-ctas {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.7s 0.72s forwards;
+    }
+    .btn-primary {
+      background: var(--cyan); color: var(--btn-text);
+      padding: 0.8rem 2rem; border-radius: 4px; font-weight: 700;
+      font-size: 0.85rem; text-decoration: none; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+    .btn-outline {
+      border: 1px solid var(--border); color: var(--muted);
+      padding: 0.8rem 2rem; border-radius: 4px; font-size: 0.85rem;
+      font-weight: 500; text-decoration: none; letter-spacing: 0.07em;
+      text-transform: uppercase; transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: var(--muted); font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.15em;
+      opacity: 0; animation: fadeIn 1s 1.2s forwards;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--cyan), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    /* TICKER */
+    .ticker {
+      background: var(--bg-mid);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 1rem 0; overflow: hidden; transition: background 0.4s;
+    }
+    .ticker-track { display: flex; white-space: nowrap; animation: ticker 28s linear infinite; }
+    .ticker-item {
+      font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted);
+      letter-spacing: 0.12em; text-transform: uppercase; padding: 0 2rem;
+      display: flex; align-items: center; gap: 2rem; flex-shrink: 0;
+    }
+    .ticker-item::after {
+      content: ''; width: 4px; height: 4px;
+      border-radius: 50%; background: var(--cyan); opacity: 0.5;
+    }
+
+    /* SECTIONS */
+    .section { padding: 6rem 4rem; }
+    .section-label {
+      font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--cyan);
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
+      color: var(--text); margin-bottom: 0.9rem;
+    }
+    .section-subtitle {
+      color: var(--muted); font-size: 0.97rem; max-width: 480px;
+      line-height: 1.8; font-weight: 300; margin-bottom: 3.5rem;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 2rem;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.4s;
+      display: flex; flex-direction: column; gap: 1rem;
+      backdrop-filter: blur(10px); position: relative; overflow: hidden;
+      cursor: pointer;
+    }
+    .project-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .project-card:hover { transform: translateY(-6px); border-color: var(--cyan-line); box-shadow: var(--shadow); }
+    .project-card:hover::before { opacity: 1; }
+    .project-icon { font-size: 1.5rem; }
+    .project-title {
+      font-family: 'Playfair Display', serif; font-size: 1.1rem;
+      font-weight: 700; color: var(--text); line-height: 1.3;
+    }
+    .project-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.75; font-weight: 300; flex: 1; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+    .tag {
+      background: var(--cyan-dim); color: var(--cyan);
+      font-family: 'DM Mono', monospace; font-size: 0.67rem;
+      padding: 0.2rem 0.6rem; border-radius: 3px; letter-spacing: 0.05em;
+    }
+    .project-arrow {
+      align-self: flex-end; color: var(--cyan);
+      font-size: 0.82rem; font-family: 'DM Mono', monospace;
+      letter-spacing: 0.05em; transition: transform 0.2s, opacity 0.2s;
+    }
+    .project-card:hover .project-arrow { transform: translate(3px,-3px); opacity: 0.8; }
+    .live-badge {
+      position: absolute; top: 1rem; right: 1rem;
+      background: var(--cyan-dim); color: var(--cyan);
+      font-family: 'DM Mono', monospace; font-size: 0.62rem;
+      padding: 0.18rem 0.5rem; border-radius: 3px;
+      letter-spacing: 0.08em; border: 1px solid var(--cyan-line);
+    }
+
+    /* ABOUT */
+    #about {
+      background: var(--bg-mid);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      transition: background 0.4s;
+    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-photo-wrap { position: relative; }
+    .about-photo-wrap::before {
+      content: ''; position: absolute; inset: -12px;
+      border: 1px solid var(--border); border-radius: 8px; z-index: 0;
+    }
+    .about-placeholder {
+      width: 100%; aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--bg-mid) 0%, var(--bg) 100%);
+      border-radius: 6px; display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; position: relative; z-index: 1; border: 1px solid var(--border);
+    }
+    .about-text .section-subtitle { margin-bottom: 2rem; }
+    .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .stat { border-left: 2px solid var(--cyan); padding-left: 1rem; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--cyan); display: block; }
+    .stat-label { font-size: 0.78rem; color: var(--muted); font-weight: 300; }
+
+    /* CONTACT */
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--text); line-height: 1.4; margin-bottom: 1.2rem;
+    }
+    .contact-tagline em { color: var(--cyan); font-style: italic; }
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 6px; text-decoration: none; color: var(--muted);
+      transition: all 0.25s; backdrop-filter: blur(10px);
+    }
+    .contact-link:hover { border-color: var(--cyan); color: var(--text); transform: translateX(6px); }
+    .contact-icon {
+      width: 40px; height: 40px; background: var(--cyan-dim); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0; transition: background 0.25s;
+    }
+    .contact-link:hover .contact-icon { background: rgba(79,195,247,0.2); }
+    .contact-link-text strong { display: block; color: var(--text); font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .contact-link-text span { font-size: 0.78rem; font-family: 'DM Mono', monospace; }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 4rem; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+
+    /* MODAL */
+    #vizModal {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(8,15,30,0.92); backdrop-filter: blur(8px);
+      align-items: center; justify-content: center;
+    }
+    #vizModal.open {
+      display: flex;
+    }
+    .modal-inner {
+      position: relative; width: 92vw; max-width: 1100px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden;
+    }
+    .modal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .modal-meta { display: flex; align-items: center; gap: 0.75rem; }
+    .modal-tool-badge {
+      font-family: 'DM Mono', monospace; font-size: 0.62rem;
+      color: var(--btn-text); background: var(--cyan);
+      padding: 0.2rem 0.6rem; border-radius: 3px; letter-spacing: 0.08em;
+    }
+    .modal-title-text {
+      font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+      font-weight: 500; color: var(--text);
+    }
+    .modal-close {
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      font-size: 1rem; width: 32px; height: 32px; border-radius: 4px;
+      cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .modal-close:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* Modal body: taller for Looker (sidebar needs more height) */
+    .modal-body { position: relative; width: 100%; padding-top: 58%; }
+    .modal-body.looker-modal { padding-top: 68%; }
+
+    .modal-body iframe,
+    .modal-body .tableau-wrap {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+    .tableau-wrap { overflow: hidden; }
+    .tableau-wrap object { width: 100%; height: 100%; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scrollPulse {
+      0%,100% { transform: scaleY(1); opacity: 1; }
+      50%      { transform: scaleY(0.6); opacity: 0.4; }
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* HERO DATAVIZ */
+    .hero-dataviz {
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      width: min(320px, 28vw); opacity: 0;
+      animation: fadeIn 1s 0.9s forwards;
+      pointer-events: none;
+    }
+    .dv-bars {
+      display: flex; align-items: flex-end; gap: 10px; height: 140px;
+      margin-bottom: 1rem;
+    }
+    .dv-bar {
+      flex: 1; height: var(--h);
+      background: linear-gradient(to top, var(--cyan), rgba(79,195,247,0.25));
+      border-radius: 3px 3px 0 0;
+      animation: barGrow 0.8s var(--d) cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes barGrow {
+      from { transform: scaleY(0); transform-origin: bottom; }
+      to   { transform: scaleY(1); transform-origin: bottom; }
+    }
+    .dv-line svg { width: 100%; height: auto; }
+    [data-theme="light"] .dv-bar {
+      background: linear-gradient(to top, var(--cyan), rgba(2,136,209,0.18));
+    }
+
+    /* HERO MINI-STATS */
+    .hero-stats {
+      display: flex; align-items: center; gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.7s 0.62s forwards;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 0.15rem; }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900;
+      color: var(--cyan); line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.72rem; color: var(--muted); font-family: 'DM Mono', monospace;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .hero-stat-divider {
+      width: 1px; height: 36px; background: var(--border); flex-shrink: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      #hero { padding: 0 1.5rem; }
+      .section { padding: 4rem 1.5rem; }
+      .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
+      .hero-dataviz { display: none; }
+      .hero-stats { gap: 1rem; }
+      .hero-stat-num { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"> Portfolio - Julieta Santos</a>
+  <ul class="nav-links">
+    <li><a href="#projects" data-i18n="nav-projects">Proyectos</a></li>
+    <li><a href="#about"    data-i18n="nav-about">Sobre mí</a></li>
+    <li><a href="#contact"  data-i18n="nav-contact">Contacto</a></li>
+    <li>
+      <div class="nav-controls">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('es')">ES</button>
+          <button class="lang-btn"        onclick="setLang('en')">EN</button>
+        </div>
+        <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+
+  <!-- Decorative data-viz element -->
+  <div class="hero-dataviz" aria-hidden="true">
+    <div class="dv-bars">
+      <div class="dv-bar" style="--h:55%;--d:0s"></div>
+      <div class="dv-bar" style="--h:80%;--d:.15s"></div>
+      <div class="dv-bar" style="--h:40%;--d:.3s"></div>
+      <div class="dv-bar" style="--h:95%;--d:.45s"></div>
+      <div class="dv-bar" style="--h:65%;--d:.6s"></div>
+      <div class="dv-bar" style="--h:30%;--d:.75s"></div>
+      <div class="dv-bar" style="--h:72%;--d:.9s"></div>
+    </div>
+    <div class="dv-line">
+      <svg viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="0,60 30,45 60,55 90,20 120,35 150,10 180,28 220,18"
+          stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <circle cx="150" cy="10" r="3.5" fill="var(--cyan)" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-tag" data-i18n="hero-tag">Economista · Data Analyst · Freelancer</p>
+    <h1 class="hero-name">Julieta<br><span>Santos</span></h1>
+    <p class="hero-desc" data-i18n="hero-desc">
+      Trabajo principalmente con Python, Excel, SQL, Power BI y Looker para convertir datos complejos en insights accionables.
+    </p>
+
+    <!-- Inline mini-stats -->
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">5+</span>
+        <span class="hero-stat-label" data-i18n="hstat-exp">años de experiencia</span>
+      </div>
+      
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary" data-i18n="hero-cta1">Ver proyectos</a>
+      <a href="#contact"  class="btn-outline"  data-i18n="hero-cta2">Contactarme</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <p class="section-label reveal"    data-i18n="proj-label">Portfolio</p>
+  <h2 class="section-title reveal"   data-i18n="proj-title">Proyectos destacados</h2>
+  <p class="section-subtitle reveal" data-i18n="proj-sub">Una selección de análisis, modelos predictivos y dashboards construidos con datos de prueba o aleatorizados</p>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-grid">
+
+    <div class="about-photo-wrap reveal">
+      <div class="about-placeholder">
+        <img src="images/portada.jpg" alt="Julieta Santos" style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p class="section-label" data-i18n="about-label">Sobre mí</p>
+      <h2 class="section-title reveal" data-i18n="about-title-h">Datos, economía<br>y decisiones inteligentes</h2>
+      <p class="section-subtitle reveal" data-i18n="about-desc">
+        Soy economista con especialización en análisis de datos financieros. Me defino como una persona dedicada, curiosa, con pensamiento crítico y analítico. Trabajo con Python, SQL, Power BI y Tableau para convertir datos en valor real.
+      </p>
+      <div class="stats-row reveal">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label" data-i18n="stat2">Años de experiencia</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
-						<article>
-							<a href="sales_report.html" class="image featured"><img src="images\powerbi.png" alt="" target="_blank"/></a>
-							<header>
-								<h3><a href="sales_report.html"> Sales report </a></h3>
-							</header>
-							<p>Palabras clave: Power BI, Business Intelligence, BigQuery, DAX, M Language </p>
-						</article>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label reveal"    data-i18n="contact-label">Contacto</p>
+      <h2 class="contact-tagline reveal" data-i18n="contact-title">¿Tenés un proyecto<br>en mente? <em>Hablemos.</em></h2>
+      <p class="section-subtitle reveal" data-i18n="contact-sub">Disponible para proyectos freelance y colaboraciones.</p>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://www.linkedin.com/in/julietasantos/" target="_blank" class="contact-link">
+        <div class="contact-icon">💼</div>
+        <div class="contact-link-text"><strong>LinkedIn</strong><span>julietasantos</span></div>
+      </a>
+      <a href="https://github.com/JulietaSantos/" target="_blank" class="contact-link">
+        <div class="contact-icon">⚙️</div>
+        <div class="contact-link-text"><strong>GitHub</strong><span>JulietaSantos</span></div>
+      </a>
+      <a href="mailto:julieta.santos98@gmail.com" class="contact-link">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-link-text"><strong>Email</strong><span>julieta.santos98@gmail.com</span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-						<article>
-							<a href="tableau_report_1.html" class="image featured"><img src="images/tableau.jpg" alt="" target="_blank" /></a>
-							<header>
-								<h3><a href="tableau_report_1.html"> Municipal and provincial coverage of IVE and ILE</a></h3>
-							</header>
-							<p>Keywords: Tableau, Dashboard, Data Visualization</p>
-						</article>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Julieta Santos</p>
+  <p data-i18n="footer-made">Hecho con dedicación · La Plata, Buenos Aires, Argentina</p>
+</footer>
 
+<!-- MODAL -->
+<div id="vizModal" onclick="closeModal()">
+  <div class="modal-inner" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <div class="modal-meta">
+        <span class="modal-tool-badge" id="modalTool">LIVE</span>
+        <span class="modal-title-text" id="modalTitle">Dashboard</span>
+      </div>
+      <button class="modal-close" onclick="event.stopPropagation(); closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
-						<article>
-							<a href="https://github.com/JulietaSantos/Portfolio/blob/main/Credit_Payment_Default_Prediction.ipynb" class="image featured"><img src="images/credit.jpg" alt="" target="_blank" /></a>
-							<header>
-								<h3><a href="https://github.com/JulietaSantos/Portfolio/blob/main/Credit_Payment_Default_Prediction.ipynb">Credit payment default prediction</a></h3>
-							</header>
-							<p>Keywords: Python, Web Scraping, Exploratory Data Analysis (EDA), Feature Engineering, Logistic Regression, Random Forest.</p>
-						</article>
+<script>
+/* ── THEME ── */
+const themeBtn = document.getElementById('themeBtn');
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  themeBtn.textContent = t === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem('js-theme', t);
+}
+function toggleTheme() {
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+}
+(function(){
+  const saved = localStorage.getItem('js-theme');
+  const sys   = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  applyTheme(saved || sys);
+})();
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+  if (!localStorage.getItem('js-theme')) applyTheme(e.matches ? 'light' : 'dark');
+});
 
-												<article>
-							<a href="monitor_bonos.html" class="image featured"><img src="images\powerbi.png" alt="" target="_blank"/></a>
-							<header>
-								<h3><a href="monitor_bonos.html"> Bonds screener </a></h3>
-							</header>
-							<p>Keywords: Power BI, Web Scraping, BigQuery, DAX, Lenguaje M</p>
-						</article>
+/* ── i18n ── */
+const T = {
+  es: {
+    "nav-projects":"Proyectos","nav-about":"Sobre mí","nav-contact":"Contacto",
+    "hero-tag":"Economista · Data Analyst · Freelancer",
+    "hero-desc":"Trabajo principalmente con Python, Excel, SQL, Power BI y Looker para convertir datos complejos en insights accionables.",
+    "hero-cta1":"Ver proyectos","hero-cta2":"Contactarme",
+    "proj-label":"Portafolio","proj-title":"Proyectos destacados",
+    "proj-sub":"Una selección de análisis, modelos predictivos y dashboards construidos con datos reales.",
+    "about-label":"Sobre mí","about-title-h":"Datos, economía<br>y decisiones inteligentes",
+    "about-desc":"Soy economista con especialización en análisis de datos financieros. Me defino como una persona dedicada, curiosa, con pensamiento crítico y analítico. Trabajo con Python, SQL, Power BI y Tableau para convertir datos en valor real.",
+    "stat1":"Proyectos completados","stat2":"Años de experiencia","stat3":"Tecnologías principales",
+    "hstat-exp":"años de experiencia","hstat-proj":"proyectos en el portfolio","hstat-tools":"herramientas de BI",
+    "contact-label":"Contacto","contact-title":"¿Tienes un proyecto<br>en mente? <em>Hablemos.</em>",
+    "contact-sub":"Disponible para proyectos freelance, colaboraciones y oportunidades de empleo.",
+    "footer-made":"Hecho con dedicación · La Plata, Argentina"
+  },
+  en: {
+    "nav-projects":"Projects","nav-about":"About","nav-contact":"Contact",
+    "hero-tag":"Economist · Data Analyst · Freelancer",
+    "hero-desc":"I work primarily with Python, Excel, SQL, Power BI, and Looker to turn complex data into actionable insights.",
+    "hero-cta1":"View Projects","hero-cta2":"Get in Touch",
+    "proj-label":"Portfolio","proj-title":"Featured Projects",
+    "proj-sub":"A curated selection of analyses, predictive models, and dashboards built with real-world data.",
+    "about-label":"About Me","about-title-h":"Data, economics<br>& smart decisions",
+    "about-desc":"I'm an economist specializing in financial data analysis. Dedicated, curious person with critical and analytical thinking. I work with Python, SQL, Power BI, and Tableau to turn data into real value.",
+    "stat1":"Completed Projects","stat2":"Years of Experience","stat3":"Core Technologies",
+    "hstat-exp":"years of experience","hstat-proj":"portfolio projects","hstat-tools":"BI tools",
+    "contact-label":"Contact","contact-title":"Have a project<br>in mind? <em>Let's talk.</em>",
+    "contact-sub":"Available for freelance projects, collaborations, and employment opportunities.",
+    "footer-made":"Built with dedication · La Plata, Argentina"
+  }
+};
+let lang = 'es';
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (T[l][k] !== undefined) el.innerHTML = T[l][k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b =>
+    b.classList.toggle('active', b.textContent === l.toUpperCase())
+  );
+  renderProjects();
+}
 
+/* ── PROJECTS DATA ── */
+const projects = [
+  // ── DASHBOARDS LIVE ──
+  {
+    icon:'📊', tool:'LOOKER STUDIO',
+    title_es:'Reporte financiero mensual', title_en:'Monthly Financial Report',
+    desc_es:'KPIs financieros mensuales, facturación y cobros recibidos. Dashboard interactivo con datos anonimizados.',
+    desc_en:'Monthly financial KPIs, billing and payments received. Interactive dashboard with anonymized data.',
+    tags:['Looker Studio','KPIs','Finanzas','Google Sheets'],
+    type:'looker',
+    // Parámetros actualizados: muestra navegación lateral y tabs de páginas
+    src:'https://lookerstudio.google.com/embed/reporting/889e8b51-68ed-461d-bf86-038ba08ea82a/page/p_3ks552jpzd?hl=es&theme=dark&pageNavigationType=left'
+  },
+  {
+    icon:'📈', tool:'POWER BI',
+    title_es:'Reporte de ventas', title_en:'Sales Report',
+    desc_es:'Dashboard interactivo de ventas con BigQuery, DAX avanzado y transformaciones en Lenguaje M.',
+    desc_en:'Interactive sales dashboard connected to BigQuery with advanced DAX and M transformations.',
+    tags:['Power BI','BigQuery','DAX','Lenguaje M'],
+    type:'powerbi',
+    src:'https://app.powerbi.com/view?r=eyJrIjoiMGMwNWQ5OTctODAwMy00MGU3LTgyOGItYjhhNTgyMTYyM2FjIiwidCI6IjFmMzU2MjdmLWM1NTEtNDZkYS04MmJkLTdlNTFhNmY1NjdmYSIsImMiOjR9&pageName=ReportSection'
+  },
+  {
+    icon:'📉', tool:'POWER BI',
+    title_es:'Monitor de bonos', title_en:'Bond Monitor',
+    desc_es:'Web scraping automatizado, análisis en BigQuery y monitoreo de bonos en tiempo real.',
+    desc_en:'Automated web scraping, BigQuery analysis, and real-time bond monitoring.',
+    tags:['Power BI','Web Scraping','BigQuery','DAX'],
+    type:'powerbi',
+    src:'https://app.powerbi.com/view?r=eyJrIjoiYjM4YWMxODctZmRjNy00OTU5LTk4YWUtOWVjYWZkY2U1ZmUwIiwidCI6IjFmMzU2MjdmLWM1NTEtNDZkYS04MmJkLTdlNTFhNmY1NjdmYSIsImMiOjR9'
+  },
+  {
+    icon:'🗺️', tool:'TABLEAU',
+    title_es:'Cobertura municipal de IVE e ILE', title_en:'Municipal Coverage: IVE & ILE',
+    desc_es:'Visualización geoespacial de cobertura de servicios de salud por municipio y provincia.',
+    desc_en:'Geospatial visualization of healthcare service coverage at municipal and provincial levels.',
+    tags:['Tableau','Dashboard','Data Viz'],
+    type:'iframe',
+    src:'https://public.tableau.com/views/CoberturamunicipalyprovincialquegarantizalasprcticasdeIVEeILE/Historia1?:embed=yes&:showVizHome=no&:toolbar=yes'
+  },
+  {
+    icon:'👷', tool:'TABLEAU',
+    title_es:'Tasas de actividad y empleo', title_en:'Employment & Activity Rates',
+    desc_es:'Tasas de actividad, desocupación y empleo visualizadas con datos de la EPH.',
+    desc_en:'Activity, unemployment, and employment rates visualized with EPH survey data.',
+    tags:['Tableau','Dashboard','Data Viz'],
+    type:'iframe',
+    src:'https://public.tableau.com/views/Tasasdeactividaddesocupacinyempleo/8?:embed=yes&:showVizHome=no&:toolbar=yes'
+  },
+  // ── CÓDIGO / NOTEBOOKS ──
+  {
+    icon:'📈', tool:null,
+    title_es:'Predicción de precio de acciones', title_en:'Stock Price Forecasting',
+    desc_es:'Series de tiempo con ARIMA, Prophet y redes neuronales LSTM para predecir cotizaciones bursátiles.',
+    desc_en:'Time series with ARIMA, Prophet, and LSTM neural networks to forecast stock prices.',
+    tags:['Python','LSTM','ARIMA','Prophet','EDA'],
+    type:'link',
+    src:'https://github.com/JulietaSantos/Portfolio/blob/main/Stock_forecasting_project.ipynb'
+  },
+  {
+    icon:'🏠', tool:null,
+    title_es:'Airbnb: Análisis de precios Hedónicos', title_en:'Airbnb: Hedonic Pricing Analysis',
+    desc_es:'Web scraping, feature engineering y regresión lineal para modelar precios de alquileres temporarios.',
+    desc_en:'Web scraping, feature engineering, and linear regression to model short-term rental pricing.',
+    tags:['Python','Web Scraping','Regresión Lineal','EDA'],
+    type:'link',
+    src:'https://github.com/JulietaSantos/Portfolio/blob/main/Airbnb_prices_project%20.ipynb'
+  },
+  {
+    icon:'💳', tool:null,
+    title_es:'Clasificación por riesgo de default', title_en:'Credit Default Risk Classification',
+    desc_es:'Regresión Logística y Random Forest para predecir el riesgo de incumplimiento crediticio.',
+    desc_en:'Logistic Regression and Random Forest to predict credit default risk.',
+    tags:['Python','Random Forest','Logistic Regression','EDA'],
+    type:'link',
+    src:'https://github.com/JulietaSantos/Portfolio/blob/main/Credit_Payment_Default_Prediction.ipynb'
+  },
+  {
+    icon:'📚', tool:null,
+    title_es:'Amazon Kindle: Análisis exploratorio', title_en:'Amazon Kindle: Exploratory Analysis',
+    desc_es:'Análisis exploratorio de libros Kindle con SQL y Jupyter para detectar patrones de popularidad.',
+    desc_en:'Exploratory analysis of Kindle books using SQL and Jupyter to uncover popularity patterns.',
+    tags:['SQL','EDA','Jupyter','Python'],
+    type:'link',
+    src:'https://github.com/JulietaSantos/Portfolio/blob/main/Amazon_Kindle_Books.ipynb'
+  },
+];
 
-						<article>
-							<a href="tableau_report_2.html" class="image featured"><img src="images/tableau.jpg" alt="" target="_blank"/></a>
-							<header>
-								<h3><a href="tableau_report_2.html"> Activity and unemployment rates  </a></h3>
-							</header>
-							<p>Palabras clave: Tableau, Dashboard, Visualización de datos</p>
-						</article>
+function renderProjects() {
+  const grid = document.getElementById('projectsGrid');
+  grid.innerHTML = projects.map(p => {
+    const title   = lang === 'es' ? p.title_es : p.title_en;
+    const desc    = lang === 'es' ? p.desc_es  : p.desc_en;
+    const isLive  = p.type !== 'link';
+    const badge   = isLive ? `<span class="live-badge">${p.tool}</span>` : '';
+    const arrow   = isLive
+      ? `<span class="project-arrow">▶ ${lang === 'es' ? 'Ver dashboard' : 'View dashboard'}</span>`
+      : `<span class="project-arrow">↗ ${lang === 'es' ? 'Ver proyecto' : 'View project'}</span>`;
+    const action = isLive
+      ? `onclick="openModal('${p.type}', '${title}', '${p.tool || ''}', '${p.src}')"`
+      : `onclick="window.open('${p.src}','_blank')"`;
+    return `
+      <div class="project-card reveal" ${action}>
+        ${badge}
+        <div class="project-icon">${p.icon}</div>
+        <h3 class="project-title">${title}</h3>
+        <p class="project-desc">${desc}</p>
+        <div class="project-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        ${arrow}
+      </div>`;
+  }).join('');
+  observeReveal();
+}
 
-						<article>
-							<a href="https://github.com/JulietaSantos/Portfolio/blob/main/Amazon_Kindle_Books.ipynb" class="image featured"><img src="images/sql .png" alt="" target="_blank"/></a>
-							<header>
-								<h3><a href="https://github.com/JulietaSantos/Portfolio/blob/main/Amazon_Kindle_Books.ipynb">Amazon Kindle Data Exploration</a></h3>
-							</header>
-							<p>Keywords: SQL, Exploratory Data Analysis (EDA), Jupiter Notebook </p>
-						</article>
+/* ── TICKER ── */
+const skills = [
+  'Python','Pandas', 'Power BI','Tableau','Looker Studio','Excel Avanzado',
+  'SQL','BigQuery'
+];
+const track = document.getElementById('tickerTrack');
+track.innerHTML = [...skills,...skills].map(s=>`<span class="ticker-item">${s}</span>`).join('');
 
-						
-					</div>
-				</section>
+/* ── SCROLL REVEAL ── */
+function observeReveal() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 75);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
 
+/* ── MODAL UNIVERSAL ── */
+function openModal(type, title, tool, src) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalTool').textContent  = tool || 'LIVE';
 
+  const body = document.getElementById('modalBody');
+  body.className = type === 'looker' ? 'modal-body looker-modal' : 'modal-body';
 
-			<!-- Features -->
-				<div class="wrapper style1" >
+  body.innerHTML = `
+    <iframe src="${src}" frameborder="0" allowfullscreen
+      style="position:absolute;inset:0;width:100%;height:100%;border:none;">
+    </iframe>`;
 
-					<section id="about" class="container special">
-						<div data-aos="zoom-in" class="about__container h-grid">
-							<div class="about__img">
-							  <img src="images\profile_photo.png" alt="about-perfil" />
-							</div>
-						<header>
-							<h2>About me</h2>
+  document.getElementById('vizModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
 
-							
+  // Evento GA4: trackear apertura de dashboard
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'open_dashboard', {
+      dashboard_tool: tool,
+      dashboard_title: title
+    });
+  }
+}
 
-							<p>I'm passionate about data analytics
-								economic and financial.
-								I define myself as a 
-								curious and dedicated person, with critical and analytical thinking
-								 to solve new
-								Challenges. </p>
-						</header>
-						<div class="row">
-						</div>
-					</section>
+function closeModal() {
+  document.getElementById('vizModal').classList.remove('open');
+  document.getElementById('modalBody').innerHTML = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-				</div>
-
-
-			<!-- Footer -->
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-
-					</div>
-					<hr />
-					<div class="row">
-						<div class="col-12">
-
-							<!-- Contact -->
-								<section id="contact" class="contact">
-									<header>
-										<h3>Contact</h3>
-									</header>
-									<p></p>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/julietasantos/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										<li><a href="https://github.com/JulietaSantos/" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=julieta.santos98@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									</ul>
-								</section>
-
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>&copy; Julieta Santos's Portfolio. </li><li></a></li>
-									</ul>
-								</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-	</div>
-
-	<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
+/* ── INIT ── */
+setLang('es');
+observeReveal();
+</script>
 </body>
 </html>
